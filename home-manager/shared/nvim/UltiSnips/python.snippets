@@ -1,0 +1,43 @@
+##########
+# Sphinx #
+##########
+
+snippet lnkc "sphinx link class" w
+:py:class:\`${1} <${2}>\`
+endsnippet
+
+snippet lnkf "sphinx link function" w
+:py:func:\`${1} <${2}>\`
+endsnippet
+
+snippet lnkm "sphinx link method" w
+:py:meth:\`${1} <${2}>\`
+endsnippet
+
+#########
+# pyddg #
+#########
+
+snippet main "__main__" w
+if __name__ == "__main__":
+	${1}
+endsnippet
+
+snippet quadric "Quadrics" w
+Q = quadrics.Quadric(np.diag([${1}]))
+Q_snet = ddg.to_smooth_net(Q)
+Q_dnet = ddg.sample_smooth_net(Q_snet, sampling=[${2}])
+ddg.to_blender_object(Q_dnet, attributes={"name":"Quadric"})
+endsnippet
+
+snippet slider "Custom Properties" w
+from functools import partial
+import ddg.visualization.blender.props as props
+callback = props.clear_callback("construction", blender_objects)
+properties = {
+"x": partial(bpy.props.FloatProperty, default=, soft_min=, soft_max=, min=, max=),
+"y": partial(bpy.props.IntProperty, default=, soft_min=, soft_max=, min=, max=),
+"z": partial(bpy.props.BoolProperty, default=),
+}
+props.add_props_with_callback_from_constructors(callback, properties, {})
+endsnippet

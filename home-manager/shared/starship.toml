@@ -1,0 +1,121 @@
+format = '$all'
+add_newline = true
+
+[os]
+disabled = true
+
+[directory]
+read_only = '󰌾 '
+home_symbol = '~'
+style = 'bold fg:cyan'
+read_only_style = 'red'
+
+[directory.substitutions]
+"notes" = '🔻 '
+"nix-nixos" = '󱄅 nix-nixOS'
+"nix-darwin" = '󱄅 nix-darwin'
+"geometry-book" = 'geometry-book 📖 '
+"nix-configuration" = '󱄅 nix-configuration'
+"Library/Mobile Documents/com~apple~CloudDocs" = '☁️  '
+
+[c]
+symbol = " "
+
+[conda]
+disabled = false
+symbol = " "
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+
+[git_branch]
+symbol = " "
+
+[git_metrics]
+disabled = false
+added_style = 'bold blue'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+[git_status]
+conflicted = '✘'
+ahead = '»'
+behind = '«'
+diverged = ' '
+up_to_date = '✓'
+untracked = '󰼈 '
+modified = '!'
+staged = '[++\($count\)](green)'
+renamed = '󰷮  '
+deleted = '󰧧 '
+
+[haskell]
+symbol = "󰲒 "
+
+[hostname]
+disabled = false
+ssh_symbol = '🌐 '
+
+[julia]
+symbol = " "
+
+[lua]
+disabled = false
+symbol = '🌙 '
+
+[nix_shell]
+disabled = false
+symbol = '󱄅 '
+format = 'via [☃️ $state( \($name\))](bold blue) '
+
+[ocaml]
+symbol = "🐪 "
+
+[os.symbols]
+Macos = '󰀵 '
+NixOS = '󱄅 '
+
+[package]
+disabled = true
+symbol = '󰏗 '
+
+[php]
+disabled = false
+symbol = "🐘 "
+
+[python]
+disabled = false
+symbol = '🐍 '
+
+[rust]
+disabled = false
+symbol = "🦀 "
+
+[custom.obsidian]
+symbol = "👾 "
+detect_folders = ['.obsidian']
+style = 'bold italic dimmed fg:purple'
+format = '[$symbol.obsidian]($style)'
+
+[custom.latex]
+symbol = '⛺︎TᴇX'
+detect_extensions = ['tex', 'bib']
+style = 'bold italic dimmed fg:#007C7C'
+format = '[$symbol]($style)'
+
+[custom.blender]
+symbol = "󰂫 "
+style = 'bold italic dimmed fg:#E97C0C'
+format = '[$symbol[blender-python]($style) ]($style)'
+detect_extensions = ['blend1', 'blend']
+
+# overriding direnv since it didn't work
+[direnv]
+disabled = false
+
+[custom.drenv]
+symbol = '~direnv '
+style = 'italic dimmed fg:blue'
+format = '[$symbol]($style)'
+detect_files = ['.envrc']
+detect_extensions = ['envrc']

@@ -1,0 +1,28 @@
+########################
+# custom zsh functions #
+########################
+
+# general utilites
+function mkcd(){
+  mkdir -p "$@" && eval cd "\"\$$#\"";
+}
+# nix
+function nurl-to-null(){
+  nurl $1 $2 2>/dev/null
+}
+function rebuild-host(){
+    darwin-rebuild build switch --flake $HOME/nix-configuration#$1
+}
+function rollback-host(){
+    darwin-rebuild build --rollback switch --flake $HOME/nix-configuration#$1
+}
+# blender on macOS
+function run-blender(){
+  /Applications/Blender-$1.app/Contents/MacOS/Blender $2
+}
+function run-blender-template(){
+  /Applications/Blender-$1.app/Contents/MacOS/Blender $HOME/Downloads/ddg/blender/template.blend
+}
+function clean-blend(){
+  find . -name "*.blend1" | xargs rm
+}

@@ -1,0 +1,83 @@
+{
+  "colors.enable": true,
+  "coc.preferences.formatOnSave": false,
+  "coc.preferences.formatOnType": true,
+
+  "suggest.enableFloat": true,
+  "suggest.defaultSortMethod": "none",
+  "suggest.snippetsSupport": true,
+  "suggest.acceptSuggestionOnCommitCharacter": true,
+
+  "diagnostic.enable": true,
+  "diagnostic.enableSign": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextLines": 1,
+  "diagnostic.virtualTextPrefix": "——",
+  "diagnostic.checkCurrentLine": true,
+
+  "snippets.ultisnips.enable": true,
+
+  "yank.highlight.enable": true,
+  "yank.enableCompletion": true,
+
+  "json.enable": true,
+  "json.format.enable": true,
+  "json.validate.enable": true,
+
+  "Lua.format.enable": true,
+  "Lua.diagnostics.enable": true,
+  "Lua.diagnostics.globals": [ "vim" ],
+  "Lua.completion.callSnippet": "Both",
+  "Lua.workspace.checkThirdParty": false,
+
+  "sh.enable": true,
+  "bashIde.shellcheckPath": "shellcheck",
+  "bashIde.enableSourceErrorDiagnostics": true,
+  "bashIde.includeAllWorkspaceSymbols": false,
+
+  "vimlsp.debug": true,
+  "vimlsp.diagnostic.enable": true,
+
+  "nil.enable": true,
+
+  "pyright.enable": true,
+  "python.formatting.provider": "black",
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "pyright.testing.provider": "pytest",
+  "pyright.testing.pytestArgs": [],
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "openFilesOnly",
+
+  "pydocstring.enable": true,
+  "pydocstring.formatter": "sphinx",
+
+  "texlab.build.onSave": false,
+  "texlab.bibtexFormatter": "texlab",
+  "texlab.formatterLineLength": 40,
+  "texlab.latexFormatter": "latexindent",
+  "texlab.chktex.onOpenAndSave": true,
+  "texlab.latexindent.modifyLineBreaks": false,
+  "texlab.forwardSearch.executable": "zathura",
+
+  "markdownlint.config": {
+      "default": true,
+      "no-trailing-spaces": true,
+      "no-multiple-blanks": true,
+      "MD041": false,
+      "MD013": false,
+      "no-empty-links": true,
+      "strong-style": true,
+      "proper-names": false,
+      "ul-indent": true,
+      "blanks-around-lists": false,
+      "blanks-around-headings": true,
+      "blanks-around-fences": true,
+      "heading-style": true,
+      "no-bare-urls": false,
+      "no-reversed-links": true,
+      "required-headings": false,
+      "single-trailing-newline": true,
+      "no-hard-tabs": false
+  }
+}

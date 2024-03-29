@@ -1,0 +1,5 @@
+#########################
+# extra zsh keybindings #
+#########################
+
+bindkey -M viins '^R' fzf-history-widget # doesn't work yet..
