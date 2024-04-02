@@ -1,5 +1,5 @@
 {
-  description = "Nix Darwin Configuration";
+  description = "Nix flakes configuration for darwin and NixOS";
 
   inputs = {
     nixpkgs = {
@@ -66,7 +66,10 @@
       inherit specialArgs;
       system = "x86_64-linux";
       modules = [
-        ./hosts/${hostnameNixOS}/configuration.nix
+          ./hosts/${hostnameNixOS}/core.nix
+          ./hosts/${hostnameNixOS}/users.nix
+          ./hosts/${hostnameNixOS}/programs.nix
+          ./hosts/${hostnameNixOS}/services.nix
         home-manager.nixosModules.home-manager
         {
           home-manager = {

@@ -1,9 +1,10 @@
 {
-  pkgs,
   lib,
+  nixpkgs,
   ...
 }: {
-  nix.package = pkgs.nix;
+  # Make `nix run nixpkgs#nixpkgs` use the same nixpkgs as the one used by this flake.
+  nix.registry.nixpkgs.flake = nixpkgs;
 
   nix.settings = {
     auto-optimise-store = false;

@@ -42,6 +42,7 @@
 
   "pyright.enable": true,
   "python.formatting.provider": "black",
+  "python.formatting.blackPath": "black",
   "python.linting.enabled": true,
   "python.linting.flake8Enabled": true,
   "pyright.testing.provider": "pytest",
@@ -79,5 +80,5 @@
       "required-headings": false,
       "single-trailing-newline": true,
       "no-hard-tabs": false
-  }
+  },
 }

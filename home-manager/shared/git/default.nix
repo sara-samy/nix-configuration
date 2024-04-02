@@ -1,8 +1,4 @@
-{
-  lib,
-  username,
-  ...
-}: {
+{lib, ...}: {
   # `programs.git` will generate the config file: ~/.config/git/config
   # to make git use this config file, `~/.gitconfig` should not exist!
   home.activation.removeExistingGitconfig = lib.hm.dag.entryBefore ["checkLinkTargets"] ''
@@ -12,6 +8,7 @@
   programs.git = {
     enable = true;
     lfs.enable = true;
+    difftastic.enable = true;
 
     userName = "sara-samy";
     userEmail = "intermsofart@hotmail.com";
@@ -19,12 +16,12 @@
     includes = [
       # use diffrent email/username for work
       {
-        path = "/Users/${username}/nix-configuration/home-manager/shared/git/work-gitconfig";
-        condition = "gitdir:/Users/${username}/Downloads/ddg/pyddg/";
+        path = "$HOME/nix-configuration/home-manager/shared/git/work-gitconfig";
+        condition = "gitdir:$HOME/Downloads/ddg/pyddg/";
       }
       {
-        path = "/Users/${username}/nix-configuration/home-manager/shared/git/work-gitconfig";
-        condition = "gitdir:/Users/${username}/Downloads/ddg/geometry-book/";
+        path = "$HOME/nix-configuration/home-manager/shared/git/work-gitconfig";
+        condition = "gitdir:$HOME/Downloads/ddg/geometry-book/";
       }
     ];
 
@@ -37,15 +34,15 @@
 
     ignores = [
       ".cache/"
-      ".DS_Store"
+      "**/.DS_Store"
       "Icon?"
       ".idea/"
       ".vscode"
       ".direnv/"
       "node_modules"
       ".ipynb_checkpoints"
-      "__pycache__"
-      "*.blend1"
+      "**/__pycache__"
+      "**/*.blend1"
       ".gitconfig"
     ];
 
@@ -58,8 +55,9 @@
 
       unpushed = "!GIT_CURRENT_BRANCH=$(git name-rev --name-only HEAD) && git log origin/$GIT_CURRENT_BRANCH..$GIT_CURRENT_BRANCH --oneline";
 
-      logr = "log --abbrev-commit --raw";
-      logline = "log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate=full";
+      dlog = "log -p --ext-diff";
+      flog = "log --abbrev-commit --raw";
+      llog = "log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate=full";
     };
   };
 }

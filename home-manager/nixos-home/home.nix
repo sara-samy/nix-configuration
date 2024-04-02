@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  username,
+  ...
+}: {
   imports = [
     ./zsh
     ./gui.nix
@@ -8,55 +12,60 @@
     ../shared/kitty
   ];
 
-  home.username = "sarasamy";
-  home.homeDirectory = "/home/sarasamy";
-  home.sessionVariables = {
-    EDITOR = "nvim";
-    VISUAL = "nvim";
-  };
+  home = {
+    username = "${username}";
+    homeDirectory = "/home/${username}";
 
-  home.file = {
-    "starship.toml" = {
-      source = ../shared/starship.toml;
+    packages = with pkgs; [
+      fd
+      unzip
+      xclip
+      ripgrep
+      pdfgrep
+      gnumake
+      # display
+      figlet
+      neofetch
+      # nix related
+      nil
+      nurl
+      alejandra
+      # latex
+      ghostscript
+      texlive.combined.scheme-full
+      texlab
+      # media
+      yt-dlp
+      ffmpeg
+      imagemagick
+      glow
+      zathura
+      # fonts
+      fantasque-sans-mono
+      (nerdfonts.override {fonts = ["JetBrainsMono" "Mononoki" "IosevkaTerm"];})
+      (google-fonts.override {fonts = ["Spectral"];})
+      # git
+      gh
+      difftastic
+    ];
+
+    sessionVariables = {
+      EDITOR = "nvim";
+      VISUAL = "nvim";
     };
-    "zathurarc" = {
-      source = ../shared/zathurarc;
+
+    file = {
+      "starship.toml" = {
+        source = ../shared/starship.toml;
+      };
+      "zathurarc" = {
+        source = ../shared/zathurarc;
+      };
     };
+
+    stateVersion = "23.11";
+    
   };
-
-  home.stateVersion = "23.11";
-
-  home.packages = with pkgs; [
-    gh
-    fd
-    unzip
-    xclip
-    ripgrep
-    pdfgrep
-    gnumake
-    # display
-    figlet
-    neofetch
-    # nix-related
-    nil
-    nurl
-    alejandra
-    # latex
-    ghostscript
-    texlive.combined.scheme-full
-    texlab
-    # media
-    yt-dlp
-    ffmpeg
-    imagemagick
-    glow
-    # python
-    poetry
-    # fonts
-    fantasque-sans-mono
-    (nerdfonts.override {fonts = ["JetBrainsMono" "Mononoki" "IosevkaTerm"];})
-    (google-fonts.override {fonts = ["Spectral"];})
-  ];
 
   fonts.fontconfig.enable = true;
 

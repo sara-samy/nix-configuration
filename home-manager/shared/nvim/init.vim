@@ -54,7 +54,7 @@ set writebackup
 set backupdir=~/.config/nvim/backup/
 au BufWritePre * let &bex = '@' . strftime("%F.%H:%M")
 
-let g:rooter_patterns = ['.git', '.svn', 'package.json', '!node_modules', '.idea', '.obsidian', 'pyproject.toml']
+let g:rooter_patterns = ['.git', '.svn', 'package.json', '!node_modules', '.idea', '.obsidian', 'pyproject.toml', 'flake.nix']
 
 " Keybindings
 nnoremap __ :split<CR>

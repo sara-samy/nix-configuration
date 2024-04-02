@@ -1,5 +1,7 @@
 format = '$all'
 add_newline = true
+follow_symlinks = true
+command_timeout = 1000
 
 [os]
 disabled = true
@@ -66,7 +68,7 @@ symbol = '🌙 '
 [nix_shell]
 disabled = false
 symbol = '󱄅 '
-format = 'via [☃️ $state( \($name\))](bold blue) '
+format = 'via [☃️  $state( \($name\))](bold blue) '
 
 [ocaml]
 symbol = "🐪 "
@@ -95,10 +97,10 @@ symbol = "🦀 "
 symbol = "👾 "
 detect_folders = ['.obsidian']
 style = 'bold italic dimmed fg:purple'
-format = '[$symbol.obsidian]($style)'
+format = '[$symbol.obsidian ]($style)'
 
 [custom.latex]
-symbol = '⛺︎TᴇX'
+symbol = '⛺︎TᴇX '
 detect_extensions = ['tex', 'bib']
 style = 'bold italic dimmed fg:#007C7C'
 format = '[$symbol]($style)'

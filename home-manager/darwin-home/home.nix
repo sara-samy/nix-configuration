@@ -1,6 +1,6 @@
 {
-  username,
   pkgs,
+  username,
   ...
 }: {
   imports = [
@@ -15,11 +15,11 @@
     homeDirectory = "/Users/${username}";
 
     packages = with pkgs; [
-      gh
       fd
       unzip
       ripgrep
       pdfgrep
+      # display
       figlet
       neofetch
       # nix related
@@ -29,16 +29,19 @@
       # android
       android-tools
       scrcpy
+      # latex
+      ghostscript
+      texlive.combined.scheme-full
+      texlab
       # media
       yt-dlp
       ffmpeg
       imagemagick
       glow
       zathura
-      # latex
-      ghostscript
-      texlive.combined.scheme-full
-      texlab
+      # git
+      gh
+      difftastic
     ];
 
     sessionVariables = {

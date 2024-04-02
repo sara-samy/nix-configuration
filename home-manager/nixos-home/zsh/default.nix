@@ -1,13 +1,18 @@
-{ config, lib, pkgs, ... }: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   programs.zsh = {
     enable = true;
     enableAutosuggestions = false;
     syntaxHighlighting = {
       enable = true;
-      highlighters = [ "brackets" ];
+      highlighters = ["brackets"];
       styles = {
         comment = "fg=black, italic";
-	path = "fg=#82AAFF";
+        path = "fg=#82AAFF";
       };
     };
     history = {
@@ -19,30 +24,30 @@
     };
     plugins = [
       {
-      name = "zsh-autosuggestions";
-	  src = pkgs.fetchFromGitHub {
-	    owner = "zsh-users";
-	    repo = "zsh-autosuggestions";
-	    rev = "v0.7.0";
-	    hash = "sha256-KLUYpUu4DHRumQZ3w59m9aTW6TBKMCXl2UcKi4uMd7w=";
-	};
-      }
-      {
-      name = "zsh-vi-mode";
-	  src = pkgs.fetchFromGitHub {
-	    owner = "zsh-users";
-	    repo = "zsh-vi-mode";
-	    rev = "v0.11.0";
-	    hash = "sha256-xbchXJTFWeABTwq6h4KWLh+EvydDrDzcY9AQVK65RS8=";
+        name = "zsh-autosuggestions";
+        src = pkgs.fetchFromGitHub {
+          owner = "zsh-users";
+          repo = "zsh-autosuggestions";
+          rev = "v0.7.0";
+          hash = "sha256-KLUYpUu4DHRumQZ3w59m9aTW6TBKMCXl2UcKi4uMd7w=";
         };
       }
       {
-      name = "fzf-tab";
-      src = pkgs. fetchFromGitHub {
-        owner = "Aloxaf";
-        repo = "fzf-tab";
-        rev = "v1.1.1";
-        hash = "sha256-0/YOL1/G2SWncbLNaclSYUz7VyfWu+OB8TYJYm4NYkM=";
+        name = "zsh-vi-mode";
+        src = pkgs.fetchFromGitHub {
+          owner = "zsh-users";
+          repo = "zsh-vi-mode";
+          rev = "v0.11.0";
+          hash = "sha256-xbchXJTFWeABTwq6h4KWLh+EvydDrDzcY9AQVK65RS8=";
+        };
+      }
+      {
+        name = "fzf-tab";
+        src = pkgs.fetchFromGitHub {
+          owner = "Aloxaf";
+          repo = "fzf-tab";
+          rev = "v1.1.1";
+          hash = "sha256-0/YOL1/G2SWncbLNaclSYUz7VyfWu+OB8TYJYm4NYkM=";
         };
       }
     ];
