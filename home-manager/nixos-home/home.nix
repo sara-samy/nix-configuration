@@ -34,6 +34,7 @@
       ghostscript
       texlive.combined.scheme-full
       texlab
+      djvu2pdf
       # media
       yt-dlp
       ffmpeg

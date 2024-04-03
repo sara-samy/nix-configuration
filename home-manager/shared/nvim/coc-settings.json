@@ -81,4 +81,8 @@
       "single-trailing-newline": true,
       "no-hard-tabs": false
   },
+
+  "rust-analyzer.enable": true,
+  "rust-analyzer.checkOnSave": true
+
 }

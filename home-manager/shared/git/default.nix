@@ -16,20 +16,19 @@
     includes = [
       # use diffrent email/username for work
       {
-        path = "$HOME/nix-configuration/home-manager/shared/git/work-gitconfig";
-        condition = "gitdir:$HOME/Downloads/ddg/pyddg/";
-      }
-      {
-        path = "$HOME/nix-configuration/home-manager/shared/git/work-gitconfig";
-        condition = "gitdir:$HOME/Downloads/ddg/geometry-book/";
+        condition = "gitdir:~/Downloads/ddg/";
+        contents.user = {
+          name = "SaraSamy";
+          email = "hussein@math.tu-berlin.de";
+        };
       }
     ];
 
     extraConfig = {
-      init.defaultBranch = "main";
-      push.default = "current";
-      push.autoSetupRemote = true;
       pull.rebase = true;
+      push.default = "current";
+      init.defaultBranch = "main";
+      push.autoSetupRemote = true;
     };
 
     ignores = [

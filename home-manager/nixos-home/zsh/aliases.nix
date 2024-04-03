@@ -5,7 +5,6 @@
 }:
 with lib;
 with pkgs; {
-  cat = "${getExe bat}";
   tree = "${getExe eza} --tree --icons --tree";
   pdfgrep = "${getExe pdfgrep} -Hin";
   yt-mp3 = ''
