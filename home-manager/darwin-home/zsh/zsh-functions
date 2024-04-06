@@ -21,7 +21,7 @@ function run-blender(){
   /Applications/Blender-$1.app/Contents/MacOS/Blender $2
 }
 function run-blender-template(){
-  /Applications/Blender-$1.app/Contents/MacOS/Blender $HOME/Downloads/ddg/blender/template.blend
+  /Applications/Blender-$1.app/Contents/MacOS/Blender $HOME/lab/blender/template.blend
 }
 function clean-blend(){
   find . -name "*.blend1" | xargs rm

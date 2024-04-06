@@ -7,6 +7,11 @@
     # media
     vlc
     foliate
-    blender
+    # visualization
+    (blender.withPackages(ps: with ps; [
+      rich
+      numpy
+      glfw
+    ]))
   ];
 }

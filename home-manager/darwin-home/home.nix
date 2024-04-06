@@ -72,7 +72,6 @@
     enable = true;
     git = true;
     icons = true;
-    enableAliases = true;
     extraOptions = ["--icons"];
   };
   programs.bat = {

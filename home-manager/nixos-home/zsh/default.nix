@@ -6,7 +6,7 @@
 }: {
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = false;
+    autosuggestion.enable = false;
     syntaxHighlighting = {
       enable = true;
       highlighters = ["brackets"];
