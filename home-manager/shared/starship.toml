@@ -111,13 +111,5 @@ style = 'bold italic dimmed fg:#E97C0C'
 format = '[$symbol[blender-python]($style) ]($style)'
 detect_extensions = ['blend1', 'blend']
 
-# overriding direnv since it didn't work
 [direnv]
 disabled = false
-
-[custom.drenv]
-symbol = '~direnv '
-style = 'italic dimmed fg:blue'
-format = '[$symbol]($style)'
-detect_files = ['.envrc']
-detect_extensions = ['envrc']

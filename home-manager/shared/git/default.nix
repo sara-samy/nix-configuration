@@ -16,7 +16,7 @@
     includes = [
       # use diffrent email/username for work
       {
-        condition = "gitdir:~/Downloads/ddg/";
+        condition = "gitdir:~/ddg/";
         contents.user = {
           name = "SaraSamy";
           email = "hussein@math.tu-berlin.de";

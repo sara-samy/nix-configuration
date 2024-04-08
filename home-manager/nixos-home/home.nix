@@ -17,16 +17,24 @@
     homeDirectory = "/home/${username}";
 
     packages = with pkgs; [
+      # search
       fd
-      unzip
-      xclip
       ripgrep
       pdfgrep
-      gnumake
-      # display
+      # utils
+      unzip
+      xclip
       figlet
+      gnumake
       neofetch
-      # nix related
+      trash-cli
+      # media utils
+      yt-dlp
+      ffmpeg
+      imagemagick
+      glow
+      zathura
+      # nix utils
       nil
       nurl
       alejandra
@@ -35,12 +43,6 @@
       texlive.combined.scheme-full
       texlab
       djvu2pdf
-      # media
-      yt-dlp
-      ffmpeg
-      imagemagick
-      glow
-      zathura
       # fonts
       fantasque-sans-mono
       (nerdfonts.override {fonts = ["JetBrainsMono" "Mononoki" "IosevkaTerm"];})
@@ -48,6 +50,7 @@
       # git
       gh
       difftastic
+      git-filter-repo
     ];
 
     sessionVariables = {

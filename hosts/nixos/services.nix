@@ -13,6 +13,8 @@
   # Enable Firmware of all licenses.
   hardware.enableAllFirmware = true;
 
+  hardware.opengl.enable = true;
+
   # Set up timezone
   time.timeZone = "Europe/Berlin";
   i18n.defaultLocale = "en_GB.UTF-8";

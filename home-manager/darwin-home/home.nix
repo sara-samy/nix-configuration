@@ -15,14 +15,22 @@
     homeDirectory = "/Users/${username}";
 
     packages = with pkgs; [
+      # search
       fd
-      unzip
       ripgrep
       pdfgrep
-      # display
+      # utils
+      unzip
       figlet
       neofetch
-      # nix related
+      # media utils
+      yt-dlp
+      ffmpeg
+      imagemagick
+      glow
+      zathura
+      trash-cli
+      # nix utils
       nil
       nurl
       alejandra
@@ -34,15 +42,10 @@
       texlive.combined.scheme-full
       texlab
       djvu2pdf
-      # media
-      yt-dlp
-      ffmpeg
-      imagemagick
-      glow
-      zathura
       # git
       gh
       difftastic
+      git-filter-repo
     ];
 
     sessionVariables = {
