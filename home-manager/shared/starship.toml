@@ -14,8 +14,6 @@ read_only_style = 'red'
 
 [directory.substitutions]
 "notes" = '🔻 '
-"nix-nixos" = '󱄅 nix-nixOS'
-"nix-darwin" = '󱄅 nix-darwin'
 "geometry-book" = 'geometry-book 📖 '
 "nix-configuration" = '󱄅 nix-configuration'
 "Library/Mobile Documents/com~apple~CloudDocs" = '☁️  '
@@ -85,6 +83,9 @@ symbol = '󰏗 '
 disabled = false
 symbol = "🐘 "
 
+[direnv]
+disabled = false
+
 [python]
 disabled = false
 symbol = '🐍 '
@@ -104,12 +105,3 @@ symbol = '⛺︎TᴇX '
 detect_extensions = ['tex', 'bib']
 style = 'bold italic dimmed fg:#007C7C'
 format = '[$symbol]($style)'
-
-[custom.blender]
-symbol = "󰂫 "
-style = 'bold italic dimmed fg:#E97C0C'
-format = '[$symbol[blender-python]($style) ]($style)'
-detect_extensions = ['blend1', 'blend']
-
-[direnv]
-disabled = false
