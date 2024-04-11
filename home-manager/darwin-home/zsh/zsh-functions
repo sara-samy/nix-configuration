@@ -1,6 +1,4 @@
-########################
-# custom zsh functions #
-########################
+# custom zsh functions
 
 # general utilites
 function mkcd(){
@@ -16,12 +14,12 @@ function rebuild-host(){
 function rollback-host(){
     darwin-rebuild build --rollback switch --flake $HOME/nix-configuration#$1
 }
-# blender on macOS
+# blender
 function run-blender(){
-  /Applications/Blender-$1.app/Contents/MacOS/Blender $2
+    blender $1
 }
 function run-blender-template(){
-  /Applications/Blender-$1.app/Contents/MacOS/Blender $HOME/lab/blender/template.blend
+    blender $HOME/lab/blender/template.blend
 }
 function clean-blend(){
   find . -name "*.blend1" | xargs rm

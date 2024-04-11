@@ -1,6 +1,4 @@
-########################
-# custom zsh functions #
-########################
+# custom zsh functions
 
 # general utilites
 function mkcd(){
