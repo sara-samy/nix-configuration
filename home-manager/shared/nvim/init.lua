@@ -48,6 +48,19 @@ require('gitsigns').setup {
     end
 };
 
+-- Transparent
+require("transparent").setup {
+    extra_groups = {
+    "NormalFloat",
+    "BufferLineTab",
+    "BufferLineFill",
+    "BufferCurrent",
+    "BufferInactive",
+    "TelescopeNormal",
+    "BufferLineFill"
+  },
+}
+
 -- mini.nvim modules
 -- animation
 require('mini.animate').setup {

@@ -61,28 +61,6 @@
   "texlab.latexindent.modifyLineBreaks": false,
   "texlab.forwardSearch.executable": "zathura",
 
-  "markdownlint.config": {
-      "default": true,
-      "no-trailing-spaces": true,
-      "no-multiple-blanks": true,
-      "MD041": false,
-      "MD013": false,
-      "no-empty-links": true,
-      "strong-style": true,
-      "proper-names": false,
-      "ul-indent": true,
-      "blanks-around-lists": false,
-      "blanks-around-headings": true,
-      "blanks-around-fences": true,
-      "heading-style": true,
-      "no-bare-urls": false,
-      "no-reversed-links": true,
-      "required-headings": false,
-      "single-trailing-newline": true,
-      "no-hard-tabs": false
-  },
-
   "rust-analyzer.enable": true,
   "rust-analyzer.checkOnSave": true
-
 }

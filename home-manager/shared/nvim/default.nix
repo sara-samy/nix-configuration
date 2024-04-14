@@ -20,6 +20,7 @@
       { plugin = mini-nvim; optional = false; }
       { plugin = lualine-nvim; optional = false; }
       { plugin = bufferline-nvim; optional = false; }
+      { plugin = transparent-nvim; optional = false; }
       { plugin = nvim-web-devicons; optional = false; }
       { plugin = vim-highlightedyank; optional = false; }
       { plugin = indent-blankline-nvim; optional = false; }
