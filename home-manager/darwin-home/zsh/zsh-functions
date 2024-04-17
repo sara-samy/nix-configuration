@@ -2,11 +2,11 @@
 
 # general utilites
 function mkcd(){
-  mkdir -p "$@" && eval cd "\"\$$#\"";
+    mkdir -p "$@" && eval cd "\"\$$#\"";
 }
 # nix
 function nurl-to-null(){
-  nurl $1 $2 2>/dev/null
+    nurl $1 $2 2>/dev/null
 }
 function rebuild-host(){
     darwin-rebuild build switch --flake $HOME/nix-configuration#$1
@@ -15,12 +15,9 @@ function rollback-host(){
     darwin-rebuild build --rollback switch --flake $HOME/nix-configuration#$1
 }
 # blender
-function run-blender(){
-    blender $1
-}
 function run-blender-template(){
     blender $HOME/lab/blender/template.blend
 }
 function clean-blend(){
-  find . -name "*.blend1" | xargs rm
+    find . -name "*.blend1" | xargs rm
 }

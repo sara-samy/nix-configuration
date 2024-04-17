@@ -2,11 +2,11 @@
 
 # general utilites
 function mkcd(){
-  mkdir -p "$@" && eval cd "\"\$$#\"";
+    mkdir -p "$@" && eval cd "\"\$$#\"";
 }
 # nix
 function nurl-to-null(){
-  nurl $1 $2 2>/dev/null
+    nurl $1 $2 2>/dev/null
 }
 function rebuild-host(){
     sudo nixos-rebuild switch --flake $HOME/nix-configuration#$1
