@@ -27,5 +27,4 @@ with pkgs; {
   clean-docs = "make -C docs/ clean";
   # poetry - installed using `curl -sSL https://install.python-poetry.org | python3 -`
   poetry = "~/.local/bin/poetry";
-  cd-poetry-envs = "cd $HOME/Library/Caches/pypoetry/virtualenvs/";
 }
