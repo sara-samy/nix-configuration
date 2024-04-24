@@ -52,6 +52,7 @@
       gh
       difftastic
       git-filter-repo
+      poetry
     ];
 
     sessionVariables = {
@@ -69,7 +70,7 @@
     };
 
     stateVersion = "23.11";
-    
+
   };
 
   fonts.fontconfig.enable = true;
