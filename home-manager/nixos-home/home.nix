@@ -28,6 +28,7 @@
       gnumake
       neofetch
       trash-cli
+      asciinema
       # media utils
       yt-dlp
       ffmpeg

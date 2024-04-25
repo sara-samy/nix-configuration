@@ -23,6 +23,7 @@
       unzip
       figlet
       neofetch
+      asciinema
       # media utils
       yt-dlp
       ffmpeg
