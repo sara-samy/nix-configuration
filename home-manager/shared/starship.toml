@@ -13,7 +13,6 @@ style = 'bold fg:cyan'
 read_only_style = 'red'
 
 [directory.substitutions]
-"lab" = '𖤖 𖠘 𖠶'
 "notes" = '🔻 '
 "geometry-book" = 'geometry-book 📖 '
 "nix-configuration" = '󱄅 nix-configuration'
