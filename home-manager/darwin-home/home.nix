@@ -20,6 +20,7 @@
       ripgrep
       pdfgrep
       # utils
+      coreutils
       unzip
       figlet
       neofetch
