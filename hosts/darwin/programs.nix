@@ -38,6 +38,7 @@
       "php"
       "M2"
       "monolith"
+      "pqiv"
     ];
     # `brew install --cask`
     casks = [

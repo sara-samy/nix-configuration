@@ -33,6 +33,7 @@
       yt-dlp
       ffmpeg
       imagemagick
+      pqiv
       glow
       zathura
       # nix utils
