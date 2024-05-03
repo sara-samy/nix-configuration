@@ -1,5 +1,5 @@
 {
-  "colors.enable": true,
+  "colors.enable": false,
   "coc.preferences.formatOnSave": false,
   "coc.preferences.formatOnType": true,
 

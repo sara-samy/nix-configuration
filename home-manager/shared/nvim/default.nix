@@ -1,4 +1,4 @@
-{ pkgs, ...}: {
+{ lib, pkgs, ...}: {
 
   programs.neovim = {
     enable = true;
@@ -7,7 +7,7 @@
     vimdiffAlias = true;
     coc = {
       enable = true;
-      settings = ./coc-settings.json;
+      settings = lib.importJSON ./coc-settings.json;
       pluginConfig = ''
         ${builtins.readFile ./coc.vim}
       '';
