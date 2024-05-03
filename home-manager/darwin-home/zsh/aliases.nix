@@ -15,7 +15,6 @@ with pkgs; {
   man-vim = "${getExe bat} $HOME/lab/notes/dev-notes/man/nvim.md";
 
   # macOS
-  trash = "trash -F";
   mdfind = "mdfind -onlyin .";
   skim = "/Applications/Skim.app/Contents/MacOS/Skim"; # vimtex viewier
   icloud = "cd $HOME/Library/Mobile\ Documents/com\~apple\~CloudDocs";
