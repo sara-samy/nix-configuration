@@ -23,8 +23,17 @@ api.nvim_set_keymap('n', '<A-Right>', '<C-w>l', { noremap = true })
 -- Indent line
 require('ibl').setup {}
 
--- Hex code colorizer
-require 'colorizer'.setup {}
+-- Highlight colors
+require("nvim-highlight-colors").setup {
+	-- 'background'|'foreground'|'virtual'
+	render = 'background',
+	---Set virtual symbol (requires render to be set to 'virtual')
+	virtual_symbol = '🟂',
+	---Highlight named colors.
+	enable_named_colors = true,
+	---Highlight tailwind colors.
+	enable_tailwind = true,
+}
 
 -- Configure gitsigns
 require('gitsigns').setup {

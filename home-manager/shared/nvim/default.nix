@@ -37,7 +37,7 @@
 
       { plugin = boole-nvim; optional = false; }
       { plugin = nvim-autopairs; optional = false; }
-      { plugin = nvim-colorizer-lua; optional = false; }
+      { plugin = nvim-highlight-colors; optional = false; }
 
       { plugin = vimtex; optional = false; }
       { plugin = vim-nix; optional = false; }
