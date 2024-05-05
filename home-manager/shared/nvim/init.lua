@@ -30,9 +30,9 @@ require("nvim-highlight-colors").setup {
 	---Set virtual symbol (requires render to be set to 'virtual')
 	virtual_symbol = '🟂',
 	---Highlight named colors.
-	enable_named_colors = true,
+	enable_named_colors = false,
 	---Highlight tailwind colors.
-	enable_tailwind = true,
+	enable_tailwind = false,
 }
 
 -- Configure gitsigns

@@ -59,7 +59,8 @@
   "texlab.latexFormatter": "latexindent",
   "texlab.chktex.onOpenAndSave": true,
   "texlab.latexindent.modifyLineBreaks": false,
-  "texlab.forwardSearch.executable": "zathura",
+  "texlab.forwardSearch.executable": "skim",
+  "texlab.forwardSearch.args": [ "main.pdf" ],
 
   "rust-analyzer.enable": true,
   "rust-analyzer.checkOnSave": true
