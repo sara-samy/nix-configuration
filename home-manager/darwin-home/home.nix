@@ -48,6 +48,9 @@
       gh
       difftastic
       git-filter-repo
+      # gui, symlinks in ~/Application
+      skimpdf
+      vscodium
     ];
 
     sessionVariables = {

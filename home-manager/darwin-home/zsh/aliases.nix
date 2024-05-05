@@ -16,7 +16,6 @@ with pkgs; {
 
   # macOS
   mdfind = "mdfind -onlyin .";
-  skim = "/Applications/Skim.app/Contents/MacOS/Skim"; # vimtex viewier
   icloud = "cd $HOME/Library/Mobile\ Documents/com\~apple\~CloudDocs";
   houdini = "/Applications/Houdini/Houdini19.5.569/Houdini\ Apprentice\ 19.5.569.app/Contents/MacOS/happrentice";
 
