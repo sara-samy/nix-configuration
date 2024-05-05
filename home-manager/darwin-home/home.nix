@@ -58,6 +58,13 @@
       VISUAL = "nvim";
     };
 
+    sessionPath = [
+      "$HOME/.local/bin/" # for poetry, installed using `curl -sSL https://install.python-poetry.org | python3 -`
+      "/opt/homebrew/bin/"
+      "/opt/homebrew/Caskroom/"
+      "$HOME/Applications/Home Manager Apps/Skim.app/Contents/MacOS" # skim for vimtex viewer
+    ];
+
     file = {
       "starship.toml" = {
         source = ../shared/starship.toml;

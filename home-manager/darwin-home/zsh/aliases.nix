@@ -23,6 +23,4 @@ with pkgs; {
   pyddg = "cd $HOME/ddg/pyddg";
   make-docs = "make -C docs/ docs";
   clean-docs = "make -C docs/ clean";
-  # poetry - installed using `curl -sSL https://install.python-poetry.org | python3 -`
-  poetry = "~/.local/bin/poetry";
 }
