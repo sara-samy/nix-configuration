@@ -2,7 +2,7 @@ local vim = vim
 local opt = vim.opt
 local api = vim.api
 
- -- Set colorscheme according to iTerm profile
+-- Set colorscheme according to iTerm profile
 local lualine_theme
 local iterm_profile = os.getenv("ITERM_PROFILE")
 if iterm_profile == '☀️  ' then
@@ -25,14 +25,14 @@ require('ibl').setup {}
 
 -- Highlight colors
 require("nvim-highlight-colors").setup {
-	-- 'background'|'foreground'|'virtual'
-	render = 'background',
-	---Set virtual symbol (requires render to be set to 'virtual')
-	virtual_symbol = '🟂',
-	---Highlight named colors.
-	enable_named_colors = false,
-	---Highlight tailwind colors.
-	enable_tailwind = false,
+    -- 'background'|'foreground'|'virtual'
+    render = 'background',
+    ---Set virtual symbol (requires render to be set to 'virtual')
+    virtual_symbol = '🟂',
+    ---Highlight named colors.
+    enable_named_colors = false,
+    ---Highlight tailwind colors.
+    enable_tailwind = false,
 }
 
 -- Configure gitsigns
@@ -60,14 +60,14 @@ require('gitsigns').setup {
 -- Transparent
 require("transparent").setup {
     extra_groups = {
-    "NormalFloat",
-    "BufferLineTab",
-    "BufferLineFill",
-    "BufferCurrent",
-    "BufferInactive",
-    "TelescopeNormal",
-    "BufferLineFill"
-  },
+        "NormalFloat",
+        "BufferLineTab",
+        "BufferLineFill",
+        "BufferCurrent",
+        "BufferInactive",
+        "TelescopeNormal",
+        "BufferLineFill"
+    },
 }
 
 -- mini.nvim modules

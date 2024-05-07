@@ -124,6 +124,9 @@ command! -nargs=? Fold :call CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer
 command! -nargs=0 OR :call CocActionAsync('runCommand', 'editor.action.organizeImport')
 
+" Add `:Prettier` command to format using coc-prettier
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+
 " Custom commands
 command! BlackFormat call CocAction('format')
 command! SortImports call CocAction('runCommand', 'python.sortImports')
