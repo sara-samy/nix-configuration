@@ -20,6 +20,21 @@
         "type": "github"
       }
     },
+    "darwin-custom-icons": {
+      "locked": {
+        "lastModified": 1693410673,
+        "narHash": "sha256-oHw98kktSorqgd73tOskTkE7AfWfNee7QTxJeMkd640=",
+        "owner": "ryanccn",
+        "repo": "nix-darwin-custom-icons",
+        "rev": "347800c2704b4adb76aaf06fbf0be7831431785b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ryanccn",
+        "repo": "nix-darwin-custom-icons",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -59,6 +74,7 @@
     "root": {
       "inputs": {
         "darwin": "darwin",
+        "darwin-custom-icons": "darwin-custom-icons",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
       }

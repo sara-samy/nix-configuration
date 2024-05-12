@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, username, ...}: {
   # To search by name, run: $ nix-env -qaP | grep wget
   environment = {
     systemPackages = with pkgs; [
@@ -9,6 +9,32 @@
     ];
     shells = [pkgs.zsh];
     variables.EDITOR = "vim";
+    # Add custom icons for applications
+    customIcons = {
+      enable = true;
+      icons = [
+        {
+          path = "/Applications/GeoGebra.app";
+          icon = ./icons/geobra.icns;
+        }
+        {
+          path = "/Applications/Obsidian.app";
+          icon = ./icons/obsidian-dark.icns;
+        }
+        {
+          path = "/Applications/texmaker.app";
+          icon = ./icons/texmaker.icns;
+        }
+        {
+          path = "/Applications/Zotero.app";
+          icon = ./icons/zotero.png;
+        }
+        {
+          path = "/Users/${username}/Applications/Home Manager Apps/kitty.app";
+          icon = ./icons/kitty.icns;
+        }
+      ];
+    };
   };
 
   # Create /etc/zshrc that loads the nix-darwin environment.

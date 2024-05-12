@@ -15,6 +15,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    darwin-custom-icons = {
+      url = "github:ryanccn/nix-darwin-custom-icons";
+    };
   };
 
   outputs = inputs @ {
@@ -22,6 +26,7 @@
     darwin,
     nixpkgs,
     home-manager,
+    darwin-custom-icons,
     ...
   }: let
     username = "sarasamy";
@@ -42,6 +47,7 @@
         ./hosts/${hostnameDarwin}/core.nix
         ./hosts/${hostnameDarwin}/users.nix
         ./hosts/${hostnameDarwin}/programs.nix
+        darwin-custom-icons.darwinModules.default
 
         home-manager.darwinModules.home-manager
         {
@@ -70,6 +76,7 @@
           ./hosts/${hostnameNixOS}/users.nix
           ./hosts/${hostnameNixOS}/programs.nix
           ./hosts/${hostnameNixOS}/services.nix
+
         home-manager.nixosModules.home-manager
         {
           home-manager = {
