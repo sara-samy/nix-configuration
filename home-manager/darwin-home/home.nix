@@ -59,10 +59,13 @@
     };
 
     sessionPath = [
-      "$HOME/.local/bin/" # for poetry, installed using `curl -sSL https://install.python-poetry.org | python3 -`
-      "/opt/homebrew/bin/"
-      "/opt/homebrew/Caskroom/"
-      "$HOME/Applications/Home Manager Apps/Skim.app/Contents/MacOS" # skim for vimtex viewer
+      # for poetry, installed using `curl -sSL https://install.python-poetry.org | python3 -`
+      "$HOME/.local/bin"
+      # homebrew
+      "/opt/homebrew/bin"
+      "/opt/homebrew/Caskroom"
+      # skim for vimtex viewer
+      "$HOME/Applications/Home Manager Apps/Skim.app/Contents/MacOS"
     ];
 
     file = {
