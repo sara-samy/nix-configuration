@@ -16,7 +16,7 @@ read_only_style = 'red'
 "notes" = '🔻 '
 "geometry-book" = 'geometry-book 📖 '
 "nix-configuration" = '󱄅 nix-configuration'
-"Library/Mobile Documents/com~apple~CloudDocs" = '☁️  '
+"Library/Mobile Documents/com~apple~CloudDocs" = '☁️ iCloud'
 
 [c]
 symbol = " "

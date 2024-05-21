@@ -71,7 +71,6 @@
     };
 
     stateVersion = "23.11";
-
   };
 
   fonts.fontconfig.enable = true;

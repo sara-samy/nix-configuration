@@ -1,4 +1,8 @@
-{pkgs, username, ...}: {
+{
+  pkgs,
+  username,
+  ...
+}: {
   # To search by name, run: $ nix-env -qaP | grep wget
   environment = {
     systemPackages = with pkgs; [
