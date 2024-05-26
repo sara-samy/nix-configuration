@@ -47,6 +47,9 @@
   "python.linting.flake8Enabled": true,
   "pyright.testing.provider": "pytest",
   "pyright.testing.pytestArgs": [],
+  "pyright.inlayHints.functionReturnTypes": false,
+  "pyright.inlayHints.variableTypes": false,
+  "pyright.inlayHints.parameterTypes": false,
   "python.analysis.autoImportCompletions": true,
   "python.analysis.diagnosticMode": "openFilesOnly",
 
