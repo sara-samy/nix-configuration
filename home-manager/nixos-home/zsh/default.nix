@@ -16,8 +16,8 @@
       };
     };
     history = {
-      save = 1000;
-      size = 1000;
+      save = 10000;
+      size = 10000;
       expireDuplicatesFirst = true;
       ignoreDups = true;
       ignoreSpace = true;
