@@ -164,6 +164,16 @@ require('boole').setup({
     }
 })
 
+-- Aerial
+require("aerial").setup({
+  -- optionally use on_attach to set keymaps when aerial has attached to a buffer
+  on_attach = function(bufnr)
+    -- Jump forwards/backwards with '{' and '}'
+    vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
+    vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
+  end,
+})
+
 -- Icons, lua fork of vim-devicons
 require 'nvim-web-devicons'.setup {
     color_icons = true,
@@ -272,6 +282,8 @@ require('telescope').load_extension('coc')
 -- Load ultiSnips
 require('telescope').load_extension('ultisnips')
 
+-- Load aerial
+require('telescope').load_extension('aerial')
 
 -- Define keymappings
 -- Defined also in init.vim

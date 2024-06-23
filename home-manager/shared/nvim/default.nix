@@ -31,6 +31,7 @@
       { plugin = nvim-treesitter.withAllGrammars; optional = false; }
       { plugin = nvim-treesitter-textobjects; optional = false; }
 
+      { plugin = aerial-nvim; optional = false; }
       { plugin = plenary-nvim; optional = false; }
       { plugin = telescope-nvim; optional = false; }
       { plugin = telescope-coc-nvim; optional = false; }
