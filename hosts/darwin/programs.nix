@@ -23,7 +23,7 @@
         }
         {
           path = "/Applications/Obsidian.app";
-          icon = ./icons/obsidian-dark.icns;
+          icon = ./icons/obsidian-light.icns;
         }
         {
           path = "/Applications/texmaker.app";
