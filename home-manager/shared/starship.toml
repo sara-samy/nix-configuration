@@ -14,6 +14,7 @@ read_only_style = 'red'
 
 [directory.substitutions]
 "notes" = '🔻 '
+"~/lab/sgi" = '  SGI'
 "geometry-book" = 'geometry-book 📖 '
 "nix-configuration" = '󱄅 nix-configuration'
 "Library/Mobile Documents/com~apple~CloudDocs" = '☁️ iCloud'
