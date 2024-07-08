@@ -7,6 +7,8 @@
     # media
     vlc
     foliate
+    # chat
+    slack
     # visualization
     libGLU
     glxinfo
