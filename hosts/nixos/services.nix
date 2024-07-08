@@ -13,7 +13,7 @@
   # Enable Firmware of all licenses.
   hardware.enableAllFirmware = true;
 
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 
   # Set up timezone
   time.timeZone = "Europe/Berlin";

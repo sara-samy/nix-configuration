@@ -16,8 +16,8 @@
     packages = with pkgs; [
       firefox
       gnome-console
-      gnome.nautilus
-      gnome.gnome-tweaks
+      nautilus
+      gnome-tweaks
     ];
   };
 
