@@ -11,7 +11,7 @@
     difftastic.enable = true;
 
     userName = "sara-samy";
-    userEmail = "intermsofart@hotmail.com";
+    userEmail = "sarrasamyy@icloud.com";
 
     includes = [
       # use diffrent email/username for work
