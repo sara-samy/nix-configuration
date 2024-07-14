@@ -56,6 +56,12 @@
   "pydocstring.enable": true,
   "pydocstring.formatter": "sphinx",
 
+  "toml.enabled": true,
+  "toml.formatter.alignEntries": true,
+  "toml.formatter.trailingNewline": true,
+  "toml.schema.enabled": false,
+  "toml.debug": false,
+
   "texlab.build.onSave": false,
   "texlab.bibtexFormatter": "texlab",
   "texlab.formatterLineLength": 40,
