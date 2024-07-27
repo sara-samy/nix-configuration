@@ -85,6 +85,37 @@ require('mini.animate').setup {
     close = { enable = false }
 }
 
+-- Github copilot.lua
+require("copilot").setup({
+  panel = {
+    enabled = true,
+    auto_refresh = true,
+  },
+  suggestion = {
+    enabled = true,
+    auto_trigger = false,
+    keymap = {
+      accept = "<M-l>",
+      accept_word = false,
+      accept_line = false,
+      next = "<M-8>",
+      prev = "<M-9>",
+      dismiss = "<C-7>",
+    },
+  },
+  filetypes = {
+    yaml = false,
+    markdown = false,
+    help = false,
+    gitcommit = false,
+    gitrebase = false,
+    hgcommit = false,
+    svn = false,
+    cvs = false,
+    ["."] = false,
+  },
+})
+
 -- Bufferline
 local bufferline = require('bufferline')
 bufferline.setup {
