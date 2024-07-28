@@ -74,7 +74,6 @@
     casks = [
       "font-hack-nerd-font"
       "miniconda"
-      "vscodium"
     ];
   };
 

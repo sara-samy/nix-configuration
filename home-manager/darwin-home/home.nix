@@ -8,6 +8,7 @@
     ../shared/git
     ../shared/nvim
     ../shared/kitty
+    ../shared/vscode
   ];
 
   home = {
