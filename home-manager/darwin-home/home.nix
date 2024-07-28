@@ -50,6 +50,8 @@
       git-filter-repo
       # gui, symlinks in ~/Application
       skimpdf
+      # web
+      hugo
     ];
 
     sessionVariables = {
