@@ -90,17 +90,28 @@ require("copilot").setup({
   panel = {
     enabled = true,
     auto_refresh = true,
+    keymap = {
+      jump_prev = "[[",
+      jump_next = "]]",
+      accept = "<CR>",
+      refresh = "gr",
+      open = "<M-CR>"
+    },
+    layout = {
+      position = "right", -- | top | left | bottom
+      ratio = 0.5
+    },
   },
   suggestion = {
     enabled = true,
     auto_trigger = false,
     keymap = {
-      accept = "<M-l>",
+      accept = "<M-CR>",
       accept_word = false,
-      accept_line = false,
+      accept_line = "<M-l>",
       next = "<M-8>",
       prev = "<M-9>",
-      dismiss = "<C-7>",
+      dismiss = "<M-7>",
     },
   },
   filetypes = {

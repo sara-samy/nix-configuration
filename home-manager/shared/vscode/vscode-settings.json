@@ -9,9 +9,9 @@
     "plaintext": false,
     "markdown": false
   },
-  "workbench.colorTheme": "Tokyo Night",
-  "workbench.preferredDarkColorTheme": "Tokyo Night",
-  "workbench.preferredLightColorTheme": "Tokyo Night Light",
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
+  "workbench.preferredLightColorTheme": "Catppuccin Latte",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.tabs.enabled": true,
   "terminal.integrated.defaultProfile.linux": "zsh",
