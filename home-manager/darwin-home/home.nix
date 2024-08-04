@@ -25,7 +25,6 @@
       unzip
       figlet
       neofetch
-      asciinema
       # media utils
       yt-dlp
       ffmpeg
@@ -33,6 +32,8 @@
       glow
       zathura
       trash-cli
+      asciinema
+      keycastr
       # nix utils
       nil
       nurl
