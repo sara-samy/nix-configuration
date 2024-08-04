@@ -38,6 +38,7 @@
       nil
       nurl
       alejandra
+      nixfmt-rfc-style
       # android
       android-tools
       scrcpy

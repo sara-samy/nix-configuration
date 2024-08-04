@@ -41,6 +41,7 @@
       nil
       nurl
       alejandra
+      nixfmt-rfc-style
       # latex
       ghostscript
       texlive.combined.scheme-full
