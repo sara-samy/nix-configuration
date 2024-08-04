@@ -2,6 +2,7 @@
   "colors.enable": false,
   "coc.preferences.formatOnSave": false,
   "coc.preferences.formatOnType": true,
+  "coc.preferences.jumpCommand": "tabe",
 
   "suggest.enableFloat": true,
   "suggest.defaultSortMethod": "none",
