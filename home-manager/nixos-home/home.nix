@@ -27,9 +27,6 @@
       xclip
       figlet
       gnumake
-      neofetch
-      trash-cli
-      asciinema
       # media utils
       yt-dlp
       ffmpeg
@@ -37,6 +34,11 @@
       pqiv
       glow
       zathura
+      # cli media utils
+      neofetch
+      trash-cli
+      asciinema
+      carbon-now-cli
       # nix utils
       nil
       nurl

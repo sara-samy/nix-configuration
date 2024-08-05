@@ -22,18 +22,21 @@
       pdfgrep
       # utils
       coreutils
+      xcodes
       unzip
+      trash-cli
       figlet
-      neofetch
       # media utils
       yt-dlp
       ffmpeg
       imagemagick
       glow
       zathura
-      trash-cli
-      asciinema
       keycastr
+      # cli media utils
+      neofetch
+      asciinema
+      carbon-now-cli
       # nix utils
       nil
       nurl
