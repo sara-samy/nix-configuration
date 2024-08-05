@@ -51,7 +51,10 @@
         };
       }
     ];
-    shellAliases = import ./aliases.nix {inherit pkgs lib config;};
+    sessionVariables = {
+      XCODES_USERNAME = "sarrasamyy@icloud.com";
+    };
+    shellAliases = import ./aliases.nix { inherit pkgs lib config; };
     initExtra = ''
       ${builtins.readFile ./zsh-functions}
       ${builtins.readFile ./keybindings}
