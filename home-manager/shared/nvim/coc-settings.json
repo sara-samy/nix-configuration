@@ -73,5 +73,9 @@
   "texlab.forwardSearch.args": [ "main.pdf" ],
 
   "rust-analyzer.enable": true,
-  "rust-analyzer.checkOnSave": true
+  "rust-analyzer.checkOnSave": true,
+
+  "clangd.enabled": true,
+  "clangd.arguments": ["--background-index", "--clang-tidy"],
+  "clangd.disableDiagnostics": true
 }

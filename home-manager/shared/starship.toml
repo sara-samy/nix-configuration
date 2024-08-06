@@ -23,6 +23,10 @@ read_only_style = 'red'
 [c]
 symbol = " "
 
+[cmake]
+disabled = false
+symbol = "󱥒  "
+
 [conda]
 disabled = false
 symbol = " "
@@ -103,7 +107,15 @@ style = 'bold italic dimmed fg:purple'
 format = '[$symbol.obsidian ]($style)'
 
 [custom.latex]
-symbol = '⛺︎TᴇX '
+symbol = '⛺︎TᴇX'
 detect_extensions = ['tex', 'bib']
 style = 'bold italic dimmed fg:#007C7C'
-format = '[$symbol]($style)'
+format = '[$symbol ]($style)'
+
+[custom.cpp]
+symbol = "󰙲 "
+style = "fg:#86BBD8"
+when = "ls src/*.cpp"
+detect_extensions = ['cpp', 'hpp']
+format = '[$symbol($output) ]($style)'
+command = "clang --version | awk 'NR==1 {print $4}'"

@@ -8,7 +8,6 @@
     ../shared/git
     ../shared/nvim
     ../shared/kitty
-    ../shared/vscode
   ];
 
   home = {
@@ -22,7 +21,6 @@
       pdfgrep
       # utils
       coreutils
-      xcodes
       unzip
       trash-cli
       figlet
@@ -30,18 +28,18 @@
       yt-dlp
       ffmpeg
       imagemagick
+      # cli media utils
       glow
       zathura
-      keycastr
-      # cli media utils
       neofetch
       asciinema
-      carbon-now-cli
       # nix utils
       nil
       nurl
       alejandra
       nixfmt-rfc-style
+      # c/c++ utils
+      cmakeCurses
       # android
       android-tools
       scrcpy
@@ -55,8 +53,10 @@
       difftastic
       git-filter-repo
       # gui, symlinks in ~/Application
+      wezterm
       skimpdf
-      # web
+      keycastr
+      # static websites
       hugo
     ];
 

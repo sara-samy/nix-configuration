@@ -19,6 +19,7 @@
       james-yu.latex-workshop
       yzhang.markdown-all-in-one
       ms-vscode.cpptools-extension-pack
+      ms-vscode.cmake-tools
     ];
   };
 }

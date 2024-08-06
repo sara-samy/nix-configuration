@@ -87,45 +87,67 @@ require('mini.animate').setup {
 
 -- Github copilot.lua
 require("copilot").setup({
-  panel = {
-    enabled = true,
-    auto_refresh = true,
-    keymap = {
-      jump_prev = "[[",
-      jump_next = "]]",
-      accept = "<CR>",
-      refresh = "gr",
-      open = "<M-CR>"
+    panel = {
+        enabled = true,
+        auto_refresh = true,
+        keymap = {
+            jump_prev = "[[",
+            jump_next = "]]",
+            accept = "<CR>",
+            refresh = "gr",
+            open = "<M-CR>"
+        },
+        layout = {
+            position = "right", -- | top | left | bottom
+            ratio = 0.5
+        },
     },
-    layout = {
-      position = "right", -- | top | left | bottom
-      ratio = 0.5
+    suggestion = {
+        enabled = true,
+        auto_trigger = false,
+        keymap = {
+            accept = "<M-CR>",
+            accept_word = false,
+            accept_line = "<M-l>",
+            next = "<M-8>",
+            prev = "<M-9>",
+            dismiss = "<M-7>",
+        },
     },
-  },
-  suggestion = {
-    enabled = true,
-    auto_trigger = false,
-    keymap = {
-      accept = "<M-CR>",
-      accept_word = false,
-      accept_line = "<M-l>",
-      next = "<M-8>",
-      prev = "<M-9>",
-      dismiss = "<M-7>",
+    filetypes = {
+        yaml = false,
+        markdown = false,
+        help = false,
+        gitcommit = false,
+        gitrebase = false,
+        hgcommit = false,
+        svn = false,
+        cvs = false,
+        ["."] = false,
     },
-  },
-  filetypes = {
-    yaml = false,
-    markdown = false,
-    help = false,
-    gitcommit = false,
-    gitrebase = false,
-    hgcommit = false,
-    svn = false,
-    cvs = false,
-    ["."] = false,
-  },
 })
+
+-- Github copilot chat
+require("CopilotChat").setup {
+    debug = false,
+    context = 'buffers',
+
+    question_header = '## Pilot 🦭 ', -- Header to use for user questions
+    answer_header = '## Copilot 📟 ', -- Header to use for AI answers
+    window = {
+        layout = 'float', -- 'vertical', 'horizontal', 'replace'
+        width = 0.7, -- fractional width of parent, or absolute width in columns when > 1
+        height = 0.7, -- fractional height of parent, or absolute height in rows when > 1
+        -- Options below only apply to floating windows
+        relative = 'editor', -- 'editor', 'win', 'cursor', 'mouse'
+        border = 'single', -- 'none', single', 'double', 'rounded', 'solid', 'shadow'
+        row = 3, -- row position of the window, default is centered
+        col = nil, -- column position of the window, default is centered
+        title = 'Copilot Chat', -- title of chat window
+        footer = nil, -- footer of chat window
+        zindex = 1, -- determines if window is on top or below other floating windows
+    },
+}
 
 -- Bufferline
 local bufferline = require('bufferline')
@@ -208,12 +230,22 @@ require('boole').setup({
 
 -- Aerial
 require("aerial").setup({
-  -- optionally use on_attach to set keymaps when aerial has attached to a buffer
-  on_attach = function(bufnr)
-    -- Jump forwards/backwards with '{' and '}'
-    vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
-    vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
-  end,
+    layout = {
+        -- These control the width of the aerial window.
+        -- They can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)
+        -- min_width and max_width can be a list of mixed types.
+        -- max_width = {40, 0.2} means "the lesser of 40 columns or 20% of total"
+        max_width = { 60, 0.4 },
+        width = nil,
+        min_width = 30,
+        default_direction = "prefer_left",
+    },
+    -- optionally use on_attach to set keymaps when aerial has attached to a buffer
+    on_attach = function(bufnr)
+        -- Jump forwards/backwards with '{' and '}'
+        vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
+        vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
+    end,
 })
 
 -- Icons, lua fork of vim-devicons
@@ -330,8 +362,8 @@ require('telescope').load_extension('aerial')
 -- Define keymappings
 -- Defined also in init.vim
 api.nvim_set_keymap('n', 'fc', '<cmd>Telescope coc<cr>', { noremap = true, silent = true })
+api.nvim_set_keymap('n', 'fa', '<cmd>Telescope aerial<cr>', { noremap = true, silent = true })
 api.nvim_set_keymap('n', 'fk', '<cmd>Telescope keymaps<cr>', { noremap = true, silent = true })
-api.nvim_set_keymap('n', 'fs', '<cmd>Telescope aerial<cr>', { noremap = true, silent = true })
 api.nvim_set_keymap('n', 'fb', '<cmd>Telescope file_browser<cr>', { noremap = true, silent = true })
 
 -- Treesitter

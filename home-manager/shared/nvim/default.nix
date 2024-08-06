@@ -21,7 +21,6 @@
       { plugin = catppuccin-nvim; optional = false; }
 
       { plugin = mini-nvim; optional = false; }
-      { plugin = copilot-lua; optional = false; }
       { plugin = lualine-nvim; optional = false; }
       { plugin = bufferline-nvim; optional = false; }
       { plugin = transparent-nvim; optional = false; }
@@ -31,6 +30,9 @@
 
       { plugin = nvim-treesitter.withAllGrammars; optional = false; }
       { plugin = nvim-treesitter-textobjects; optional = false; }
+
+      { plugin = copilot-lua; optional = false; }
+      { plugin = CopilotChat-nvim; optional = false; }
 
       { plugin = aerial-nvim; optional = false; }
       { plugin = plenary-nvim; optional = false; }
