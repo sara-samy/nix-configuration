@@ -15,8 +15,9 @@ with pkgs; {
   man-git = "${getExe bat} $HOME/lab/notes/dev-notes/man/git.md";
   man-vim = "${getExe bat} $HOME/lab/notes/dev-notes/man/nvim.md";
 
-  # ddg
+  # pyddg and python
   pyddg = "cd $HOME/ddg/pyddg";
   make-docs = "make -C docs/ docs";
   clean-docs = "make -C docs/ clean";
+  rich-emoji = "python -m rich.emoji";
 }

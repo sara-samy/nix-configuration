@@ -20,8 +20,9 @@ with pkgs; {
   icloud = "cd $HOME/Library/Mobile\ Documents/com\~apple\~CloudDocs";
   houdini = "/Applications/Houdini/Houdini19.5.569/Houdini\ Apprentice\ 19.5.569.app/Contents/MacOS/happrentice";
 
-  # pyddg
+  # pyddg and python
   pyddg = "cd $HOME/ddg/pyddg";
   make-docs = "make -C docs/ docs";
   clean-docs = "make -C docs/ clean";
+  rich-emoji = "python -m rich.emoji";
 }
