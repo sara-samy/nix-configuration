@@ -38,8 +38,6 @@
       nurl
       alejandra
       nixfmt-rfc-style
-      # c/c++ utils
-      cmakeCurses
       # android
       android-tools
       scrcpy
