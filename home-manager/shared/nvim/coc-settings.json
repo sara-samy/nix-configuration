@@ -40,6 +40,7 @@
   "vimlsp.diagnostic.enable": true,
 
   "nil.enable": true,
+  "nil.formatting.command": ["nixfmt"],
 
   "pyright.enable": true,
   "python.formatting.provider": "black",

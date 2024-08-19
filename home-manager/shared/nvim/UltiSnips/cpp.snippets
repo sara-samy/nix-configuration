@@ -1,0 +1,12 @@
+#############
+# polyscope #
+#############
+
+snippet polyscope_init "Setup polyscope" w
+// Initialize polyscope with some options
+polyscope::view::setUpDir(polyscope::UpDir::YUp);
+polyscope::view::setFrontDir(polyscope::FrontDir::XFront);
+polyscope::init();
+// Show polyscope gui
+polyscope::show();
+endsnippet
