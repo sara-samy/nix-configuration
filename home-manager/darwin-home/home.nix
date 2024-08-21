@@ -24,6 +24,7 @@
       unzip
       trash-cli
       figlet
+      hyperfine
       # media utils
       yt-dlp
       ffmpeg

@@ -27,6 +27,7 @@
       xclip
       figlet
       gnumake
+      hyperfine
       # media utils
       yt-dlp
       ffmpeg
