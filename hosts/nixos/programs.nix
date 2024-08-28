@@ -1,7 +1,8 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # List packages installed system-wide.
   environment = {
-    gnome.excludePackages = [pkgs.gnome-tour];
+    gnome.excludePackages = [ pkgs.gnome-tour ];
     systemPackages = with pkgs; [
       vim
       git

@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     ./hardware-configuration.nix
   ];
@@ -64,7 +65,7 @@
     gnome-remote-desktop.enable = false;
     core-utilities.enable = false;
   };
-  services.xserver.excludePackages = [pkgs.xterm];
+  services.xserver.excludePackages = [ pkgs.xterm ];
 
   system.stateVersion = "23.11"; # Do not edit.
 }

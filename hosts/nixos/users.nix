@@ -3,7 +3,8 @@
   username,
   hostnameNixOS,
   ...
-}: {
+}:
+{
   # Enable zsh
   programs.zsh.enable = true;
 
@@ -12,7 +13,10 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "Sara Samy";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
       firefox
       gnome-console
