@@ -2,7 +2,8 @@
   pkgs,
   username,
   ...
-}: {
+}:
+{
   # To search by name, run: $ nix-env -qaP | grep wget
   environment = {
     systemPackages = with pkgs; [
@@ -11,7 +12,7 @@
       curl
       wget
     ];
-    shells = [pkgs.zsh];
+    shells = [ pkgs.zsh ];
     variables.EDITOR = "vim";
     # Add custom icons for applications
     customIcons = {
@@ -26,8 +27,8 @@
           icon = ./icons/obsidian-light.icns;
         }
         {
-          path = "/Applications/texmaker.app";
-          icon = ./icons/texmaker.icns;
+          path = "/Applications/KodeLife.app";
+          icon = ./icons/black.icns;
         }
         {
           path = "/Applications/Zotero.app";
