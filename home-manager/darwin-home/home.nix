@@ -49,6 +49,7 @@
       djvu2pdf
       # git
       gh
+      git-open
       difftastic
       git-filter-repo
       # gui, symlinks in ~/Application

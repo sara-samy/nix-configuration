@@ -56,6 +56,7 @@
       (google-fonts.override {fonts = ["Spectral"];})
       # git
       gh
+      git-open
       difftastic
       git-filter-repo
       poetry
