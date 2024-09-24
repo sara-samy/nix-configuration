@@ -1,16 +1,29 @@
-# custom zsh functions
+# zsh helper functions
 
-# general utilites
+# general utilities
 function mkcd(){
     mkdir -p "$@" && eval cd "\"\$$#\"";
 }
+
 # nix
+# nurl-to-null https://github.com/Aloxaf/fzf-tab v1.1.2
 function nurl-to-null(){
     nurl $1 $2 2>/dev/null
 }
 function rebuild-host(){
-    nixos-rebuild switch --use-remote-sudo --flake $HOME/nix-configuration#$1
+    nixos-rebuild switch --use-remote-sudo --flake \
+    $HOME/nix-configuration#$1
 }
+
 function rollback-host(){
-    sudo nixos-rebuild switch --rollback --flake $HOME/nix-configuration#$1
+    sudo nixos-rebuild switch --rollback --flake \
+    $HOME/nix-configuration#$1
+}
+
+# ffmpeg
+# make-gif images_%03d.png result.gif
+function make-gif(){
+    ffmpeg -i $1 -vf palettegen=reserve_transparent=1 palette.png && \
+    ffmpeg -framerate 30 -i $1 -i palette.png \
+    -lavfi paletteuse=alpha_threshold=128 -gifflags -offsetting $2
 }

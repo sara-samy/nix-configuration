@@ -1,23 +1,42 @@
-# custom zsh functions
+# zsh helper functions
 
-# general utilites
+# general utilities
 function mkcd(){
     mkdir -p "$@" && eval cd "\"\$$#\"";
 }
+
 # nix
+# nurl-to-null https://github.com/Aloxaf/fzf-tab v1.1.2
 function nurl-to-null(){
     nurl $1 $2 2>/dev/null
 }
 function rebuild-host(){
-    darwin-rebuild build switch --flake $HOME/nix-configuration#$1
+    darwin-rebuild build switch --flake \
+    $HOME/nix-configuration#$1
 }
+
 function rollback-host(){
-    darwin-rebuild build --rollback switch --flake $HOME/nix-configuration#$1
+    darwin-rebuild build --rollback switch --flake \
+    $HOME/nix-configuration#$1
 }
+
+# latex
+function clean-latex(){
+    rm -r -f *.aux *.log *.lof *.gz *.toc
+}
+
 # blender
 function run-blender-template(){
     blender $HOME/lab/blender/template.blend
 }
 function clean-blend(){
     find . -name "*.blend1" | xargs rm
+}
+
+# ffmpeg
+# make-gif images_%03d.png result.gif
+function make-gif(){
+    ffmpeg -i $1 -vf palettegen=reserve_transparent=1 palette.png && \
+    ffmpeg -framerate 30 -i $1 -i palette.png \
+    -lavfi paletteuse=alpha_threshold=128 -gifflags -offsetting $2
 }
