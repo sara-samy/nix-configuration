@@ -16,6 +16,7 @@
   nixpkgs.config = {
     allowUnfree = true;
     allowBroken = false;
+    allowUnsupportedSystem = false;
   };
 
   # Garbage collect weekly
