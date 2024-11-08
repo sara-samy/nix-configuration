@@ -3,7 +3,7 @@
 }: {
   programs.kitty = {
     enable = true;
-    theme = "Dracula";
+    themeFile = "Dracula";
     font = {
       name = "IosevkaTerm Nerd Font";
       size = 12.0;
