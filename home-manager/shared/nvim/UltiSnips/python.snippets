@@ -14,9 +14,9 @@ snippet linkm "sphinx link method" w
 :py:meth:\`${1} <${2}>\`
 endsnippet
 
-#########
-# pyddg #
-#########
+###########
+# general #
+###########
 
 snippet main "__main__" w
 if __name__ == "__main__":
@@ -28,7 +28,11 @@ dir = os.path.dirname(os.path.abspath(__file__))
 ${1}
 endsnippet
 
-snippet matplot "setup matplotlib" w
+##############
+# matplotlib #
+##############
+
+snippet matplot "Setup matplotlib" w
 # Set up parameters
 plt.rcParams.update(
 	{"text.usetex": True, "font.family": "IosevkaTerm Nerd Font", "figure.dpi": 100}
@@ -42,7 +46,7 @@ ${1}
 plt.show()
 endsnippet
 
-snippet matplot_polyline "setup matplotlib" w
+snippet ppolyline "Plot polyline using matplotlib" w
 for i in range(edgs.shape[0]):
 	ax1.plot(
 		[vs[edgs[i, 0], 0], vs[edgs[i, 1], 0]],
@@ -52,14 +56,18 @@ for i in range(edgs.shape[0]):
 ${1}
 endsnippet
 
-snippet quadric "Quadrics" w
+#########
+# pyddg #
+#########
+
+snippet quadric "pyddg quadrics" w
 Q = quadrics.Quadric(np.diag([${1}]))
 Q_snet = ddg.to_smooth_net(Q)
 Q_dnet = ddg.sample_smooth_net(Q_snet, sampling=[${2}])
 ddg.to_blender_object(Q_dnet, attributes={"name":"Quadric"})
 endsnippet
 
-snippet slider "Custom Properties" w
+snippet bslider "blender custom properties" w
 from functools import partial
 import ddg.visualization.blender.props as props
 callback = props.clear_callback("construction", blender_objects)
