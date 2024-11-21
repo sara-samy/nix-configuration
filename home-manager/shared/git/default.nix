@@ -22,6 +22,13 @@
           email = "hussein@math.tu-berlin.de";
         };
       }
+      {
+        condition = "gitdir:~/lab/indie/";
+        contents.user = {
+          name = "SaraSamy";
+          email = "hussein@math.tu-berlin.de";
+        };
+      }
     ];
 
     extraConfig = {
