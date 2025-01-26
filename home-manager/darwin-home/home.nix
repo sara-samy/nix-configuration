@@ -53,11 +53,11 @@
       difftastic
       git-filter-repo
       # gui, symlinks in ~/Application
-      wezterm
       skimpdf
       keycastr
-      # static websites
+      # web
       hugo
+      wabt
     ];
 
     sessionVariables = {
