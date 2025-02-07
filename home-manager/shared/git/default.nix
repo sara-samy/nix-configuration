@@ -36,6 +36,9 @@
       push.default = "current";
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
+      http.postBuffer = 524288000;
+      http.lowSpeedLimit = 0;
+      http.lowSpeedTime = 999999;
     };
 
     ignores = [
