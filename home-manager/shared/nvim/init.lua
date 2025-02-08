@@ -143,10 +143,18 @@ require("CopilotChat").setup {
         border = 'single', -- 'none', single', 'double', 'rounded', 'solid', 'shadow'
         row = 3, -- row position of the window, default is centered
         col = nil, -- column position of the window, default is centered
-        title = 'Copilot Chat', -- title of chat window
+        title = 'GitHub Copilot Chat', -- title of chat window
         footer = nil, -- footer of chat window
         zindex = 1, -- determines if window is on top or below other floating windows
     },
+    show_help = false,
+    show_folds = true,
+    auto_insert_mode = false,
+    auto_follow_cursor = true,
+    highlight_selection = true,
+    highlight_headers = true,
+    insert_at_end = false,
+    clear_chat_on_new_prompt = false
 }
 
 -- Bufferline
