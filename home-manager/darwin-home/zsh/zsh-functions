@@ -20,11 +20,6 @@ function rollback-host(){
     $HOME/nix-configuration#$1
 }
 
-# latex
-function clean-latex(){
-    rm -r -f *.aux *.log *.lof *.gz *.toc
-}
-
 # blender
 function run-blender-template(){
     blender $HOME/lab/blender/template.blend
