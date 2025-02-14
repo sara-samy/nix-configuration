@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   username,
   ...
 }: {
@@ -8,6 +9,7 @@
     ../shared/git
     ../shared/nvim
     ../shared/kitty
+    ../shared/emacs
   ];
 
   home = {
@@ -63,6 +65,10 @@
     sessionVariables = {
       EDITOR = "nvim";
       VISUAL = "nvim";
+      DOOMDIR = "${config.xdg.configHome}/doom";
+      EMACSDIR = "${config.xdg.configHome}/emacs";
+      DOOMLOCALDIR = "${config.xdg.dataHome}/doom";
+      DOOMPROFILELOADFILE = "${config.xdg.stateHome}/doom-profiles-load.el";
     };
 
     sessionPath = [
@@ -73,6 +79,8 @@
       "/opt/homebrew/Caskroom"
       # skim for vimtex viewer
       "$HOME/Applications/Home Manager Apps/Skim.app/Contents/MacOS"
+      # emacs
+      "${config.xdg.configHome}/emacs/bin"
     ];
 
     file = {
@@ -88,6 +96,10 @@
   };
 
   programs.home-manager.enable = true;
+  programs.emacs= {
+    enable = true;
+    package = pkgs.emacs;
+  };
   programs.zoxide = {
     enable = true;
     options = ["--cmd cd"];
