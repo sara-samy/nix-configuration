@@ -28,7 +28,7 @@
       figlet
       hyperfine
       # media utils
-      yt-dlp
+      yt-dlp-light
       ffmpeg
       imagemagick
       # cli media utils

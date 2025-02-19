@@ -29,7 +29,7 @@
       gnumake
       hyperfine
       # media utils
-      yt-dlp
+      yt-dlp-light
       ffmpeg
       imagemagick
       pqiv
