@@ -59,9 +59,7 @@
       cleanup = "zap";
     };
     taps = [
-      "homebrew/cask-fonts"
       "homebrew/services"
-      "homebrew/cask-versions"
       "Macaulay2/tap"
     ];
     # `brew install`
