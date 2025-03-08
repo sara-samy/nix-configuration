@@ -24,6 +24,8 @@
       # utils
       coreutils
       unzip
+      cmake
+      pkg-config
       trash-cli
       figlet
       hyperfine
@@ -31,6 +33,7 @@
       yt-dlp-light
       ffmpeg
       imagemagick
+      nodejs_23 # needed for vim copilot
       # cli media utils
       glow
       zathura
