@@ -136,7 +136,8 @@
   };
   programs.direnv = {
     enable = true;
-    enableZshIntegration = true;
     nix-direnv.enable = true;
+    enableZshIntegration = true;
+    config = pkgs.lib.importTOML ../shared/direnv.toml;
   };
 }
