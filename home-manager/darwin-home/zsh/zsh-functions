@@ -4,6 +4,13 @@
 function mkcd(){
     mkdir -p "$@" && eval cd "\"\$$#\"";
 }
+function littlezab() {
+  if [[ -d "/Volumes/LITTLEZAB" ]]; then
+    cd "/Volumes/LITTLEZAB"
+  else
+    echo "LITTLEZAB 🦢 is not mounted. Please mount it first."
+  fi
+}
 
 # nix
 # nurl-to-null https://github.com/Aloxaf/fzf-tab v1.1.2
