@@ -9,7 +9,7 @@ if iterm_profile == '☀️  ' then
     vim.cmd('colorscheme catppuccin-latte')
     lualine_theme = 'ayu_light'
 else
-    vim.cmd('colorscheme tokyonight-moon')
+    vim.cmd('colorscheme catppuccin-mocha')
     lualine_theme = 'nightfly'
 end
 
