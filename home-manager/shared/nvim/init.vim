@@ -7,7 +7,7 @@ filetype plugin indent on
 
 set title
 set hidden
-set mouse=v
+set mouse=
 set noswapfile
 set noshowmatch
 
