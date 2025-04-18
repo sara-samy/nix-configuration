@@ -60,8 +60,6 @@
       difftastic
       git-filter-repo
       poetry
-      # web
-      hugo
     ];
 
     sessionVariables = {

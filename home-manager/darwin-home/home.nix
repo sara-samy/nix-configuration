@@ -61,7 +61,6 @@
       skimpdf
       keycastr
       # web
-      hugo
       wabt
     ];
 
