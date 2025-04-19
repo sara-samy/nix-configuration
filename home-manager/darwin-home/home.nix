@@ -44,6 +44,7 @@
       nurl
       alejandra
       nixfmt-rfc-style
+      nix-prefetch-github
       # android
       android-tools
       scrcpy
