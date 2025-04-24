@@ -83,7 +83,9 @@
       "/opt/homebrew/bin"
       "/opt/homebrew/sbin"
       "/opt/homebrew/Caskroom"
-      # skim for vimtex viewer
+      # docker
+      "/Applications/Docker.app/Contents/Resources/bin"
+      # skim (for vimtex viewer)
       "$HOME/Applications/Home Manager Apps/Skim.app/Contents/MacOS"
       # gui blender
       "/Applications/Blender.app/Contents/MacOS"
