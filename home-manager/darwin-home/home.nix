@@ -22,20 +22,22 @@
       ripgrep
       pdfgrep
       # utils
-      coreutils
       unzip
-      cmake
-      pkg-config
       trash-cli
-      figlet
+      coreutils
+      pkg-config
+      # c++
+      cmake
+      # benchmarking
       hyperfine
       # media utils
-      yt-dlp-light
       ffmpeg
+      yt-dlp-light
       imagemagick
       nodejs_23 # needed for vim copilot
-      # cli media utils
+      # cli media
       glow
+      figlet
       zathura
       neofetch
       asciinema
@@ -102,7 +104,7 @@
   };
 
   programs.home-manager.enable = true;
-  programs.emacs= {
+  programs.emacs = {
     enable = true;
     package = pkgs.emacs;
   };
