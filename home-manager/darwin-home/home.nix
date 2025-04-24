@@ -83,6 +83,8 @@
       "/opt/homebrew/Caskroom"
       # skim for vimtex viewer
       "$HOME/Applications/Home Manager Apps/Skim.app/Contents/MacOS"
+      # gui blender
+      "/Applications/Blender.app/Contents/MacOS"
       # emacs
       "${config.xdg.configHome}/emacs/bin"
     ];
