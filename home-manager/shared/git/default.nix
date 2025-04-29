@@ -14,7 +14,7 @@
     userEmail = "sarrasamyy@icloud.com";
 
     includes = [
-      # use diffrent email/username for work
+      # use diffrent email/username for work and university.
       {
         condition = "gitdir:~/ddg/";
         contents.user = {
@@ -27,6 +27,13 @@
         contents.user = {
           name = "SaraSamy";
           email = "hussein@math.tu-berlin.de";
+        };
+      }
+      {
+        condition = "gitdir:~/lab/compiler-techniques/";
+        contents.user = {
+          name = "sarahsamy";
+          email = "sara.husseinsamyyounan@campus.tu-berlin.de";
         };
       }
     ];
