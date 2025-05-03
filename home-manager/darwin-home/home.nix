@@ -26,6 +26,8 @@
       trash-cli
       coreutils
       pkg-config
+      # llm
+      ollama
       # c++
       cmake
       # benchmarking
